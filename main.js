@@ -1,5 +1,5 @@
 // Inicializa EmailJS con tu API Key
-emailjs.init("Tbd0un5y_p4ijDEww"); // Sustituye con tu API Key
+emailjs.init("Tbd0un5y_p4ijDEww"); // Asegúrate de que esta es tu API Key
 
 document
   .getElementById("subscribeButton")
@@ -15,10 +15,13 @@ document
       return;
     }
 
+    // Asegúrate de que el correo ingresado es válido
+    console.log("Email a enviar:", emailValue);
+
     // Envía el correo de bienvenida usando EmailJS
     emailjs
       .send("service_3qsq00u", "template_eqyi1vv", {
-        to_email: emailValue,
+        to_email: emailValue, // El valor dinámico del correo
         message: "Welcome to our newsletter! We're happy to have you on board.",
       })
       .then(
