@@ -1,5 +1,5 @@
 // Inicializa EmailJS
-emailjs.init("EQXArYh96HWlNLzqL"); 
+emailjs.init("Tbd0un5y_p4ijDEww"); 
 
 document
   .getElementById("subscribeButton")
@@ -24,7 +24,7 @@ document
       .then(
         function (response) {
           console.log("SUCCESS", response);
-          alert("Please check your inbox to confirm your subscription!");
+          alert("Please check your email inbox to confirm your subscription!");
         },
         function (error) {
           console.log("FAILED", error);
