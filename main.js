@@ -1,32 +1,11 @@
-//-----------------------------------------------Validador de mail precarga
-document
-  .getElementById("subscribeButton")
-  .addEventListener("click", function (e) {
-    const emailInput = document.getElementById("inputEmail");
-    const emailValue = emailInput.value;
-
-    // Validación de email
-    if (!emailValue || !validateEmail(emailValue)) {
-      alert("Please enter a valid email address.");
-      return;
-    }
-
-    // Si es válido, mostrar mensaje de verificación
-    alert("Please check your inbox to confirm your subscription!");
-  });
-
-function validateEmail(email) {
-  const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-  return regex.test(email);
-}
-
-//---------------------------------------------------------API EmailJS
 // Inicializa EmailJS
-emailjs.init("dario guaraz"); // Sustituye con tu User ID que obtienes de EmailJS
+emailjs.init("EQXArYh96HWlNLzqL"); 
 
 document
   .getElementById("subscribeButton")
   .addEventListener("click", function (e) {
+    e.preventDefault();  // Prevenir el comportamiento por defecto del botón (si es un formulario)
+
     const emailInput = document.getElementById("inputEmail");
     const emailValue = emailInput.value;
 
@@ -53,3 +32,9 @@ document
         }
       );
   });
+
+// Función para validar el formato del correo
+function validateEmail(email) {
+  const regex = /^[a-zA-Z0-9._-]+@[a-zAohZ0-9.-]+\.[a-zA-Z]{2,6}$/;
+  return regex.test(email);
+}
