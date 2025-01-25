@@ -1,5 +1,5 @@
-// Inicializa EmailJS con tu API Key
-emailjs.init("Tbd0un5y_p4ijDEww"); // Asegúrate de que esta es tu API Key
+// Inicializa EmailJS
+emailjs.init("Tbd0un5y_p4ijDEww"); // API Key
 
 document
   .getElementById("subscribeButton")
