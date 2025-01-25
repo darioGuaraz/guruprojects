@@ -38,7 +38,7 @@ document
 
     // Envía el correo de bienvenida usando EmailJS
     emailjs
-      .send("service_fsxdlu1", "YOUR_TEMPLATE_ID", {
+      .send("service_3qsq00u", "template_eqyi1vv", {
         to_email: emailValue,
         message: "Welcome to our newsletter! We're happy to have you on board.",
       })
