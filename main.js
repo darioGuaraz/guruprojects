@@ -1,5 +1,5 @@
-// Inicializa EmailJS
-emailjs.init("Tbd0un5y_p4ijDEww"); 
+// Inicializa EmailJS con tu API Key
+emailjs.init("Tbd0un5y_p4ijDEww"); // Sustituye con tu API Key
 
 document
   .getElementById("subscribeButton")
@@ -24,10 +24,10 @@ document
       .then(
         function (response) {
           console.log("SUCCESS", response);
-          alert("Please check your email inbox to confirm your subscription!");
+          alert("Please check your inbox to confirm your subscription!");
         },
         function (error) {
-          console.log("FAILED", error);
+          console.error("FAILED", error);
           alert("Something went wrong. Please try again.");
         }
       );
@@ -35,6 +35,6 @@ document
 
 // Función para validar el formato del correo
 function validateEmail(email) {
-  const regex = /^[a-zA-Z0-9._-]+@[a-zAohZ0-9.-]+\.[a-zA-Z]{2,6}$/;
+  const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
   return regex.test(email);
 }
